@@ -14,4 +14,14 @@ def likes_to_eat(person, food):
 def add_friend(person, friend):
     person["friends"].append(friend)
     
+def remove_friend(person, friend):
+    person["friends"].remove(friend)
 
+
+def total_money(people):
+    total = 0
+
+    for person in people:
+        total = total + person["monies"]
+
+    return total
