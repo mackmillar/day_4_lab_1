@@ -25,3 +25,23 @@ def total_money(people):
         total = total + person["monies"]
 
     return total
+
+def l_money(lender, lendee, amount):
+    lender["monies"] = lender["monies"] - amount
+    lendee["monies"] = lendee["monies"] + amount
+
+    return lendee["monies"], lender["monies"]
+
+def all_favourite_foods (people):
+    favourite_foods = []
+    for person in people:
+        favourite_foods.extend(person['favourites']['snacks'])
+    return favourite_foods
+
+def find_no_friendends(people):
+    no_friends = []
+    for person in people:
+        if person["friends"] == []:
+            no_friends.append(person)
+
+    return no_friends
